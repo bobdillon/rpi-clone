@@ -1,19 +1,20 @@
-To scan for attached sd cards...
+Do not have any data on the disk which will host the clone, including partitions. 
 
+to scan for attached sd cards...
 ls -la /dev/disk/by-id
 
 look for the one labelled either sda or sdd
  
 it will be before the entry for sdd-1 or sda-1. 
 
-
-
-# replace sda with sdd if applicable
+replace sda with sdd if applicable
 
 to make the clone onto the sd card in the reader in the pi usb port...
 
-sudo rpi-clone sda -v
+move into script/repo directory
+#may not be needed - sudo cp rpi-clone rpi-clone-setup /usr/local/sbin
+sudo ./rpi-clone sda -v
 
-yes
+"yes"
 
-enter through the optional name screen
+"enter" through the optional name screen
